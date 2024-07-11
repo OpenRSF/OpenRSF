@@ -20,4 +20,14 @@
 #include <pinocchio/algorithm/rnea.hpp>
 #include <pinocchio/algorithm/aba.hpp>
 
+
 #include <Eigen/Dense>
+
+namespace rsf
+{
+    class PinocchioInterface
+    {
+        explicit PinocchioInterface();
+        
+    }
+}
