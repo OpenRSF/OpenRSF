@@ -27,7 +27,17 @@ namespace rsf
 {
     class PinocchioInterface
     {
-        explicit PinocchioInterface();
+        explicit PinocchioInterface(std::string urdf_path_name);
         
-    }
+        virtual void Update();
+
+        virtual void SetJointMember();
+        virtual void GetJointMember();
+
+        virtual Eigen::Isometry3d GetFrame(std::string frame_name);
+
+        virtual Eigen::MatrixXd GetJacobianMatrix(std::string frame_name);
+
+        virtual Eigen::VectorXd GetLagrangeG();
+    };
 }
