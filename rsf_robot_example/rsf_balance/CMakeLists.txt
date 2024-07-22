@@ -19,7 +19,7 @@ endforeach()
 include_directories(include)
 
 # 编译源文件生成库
-add_library(${PROJECT_NAME} SHARED src/RobotInterface.cpp)
+add_library(${PROJECT_NAME} SHARED src/BalanceNmpc.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
 
