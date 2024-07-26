@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(rsf_math)
+project(rsf_core)
 
 # 找到依赖包
 set(THIS_PACKAGE_INCLUDE_DEPENDS
@@ -18,7 +18,10 @@ endforeach()
 include_directories(include)
 
 # 编译源文件生成库
-add_library(${PROJECT_NAME} SHARED src/BalanceNmpc.cpp)
+
+file(GLOB_RECURSE MAIN_SOURCES "src/math/ode/*.cpp")
+
+add_library(${PROJECT_NAME} SHARED GLOB_RECURSE)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
 
