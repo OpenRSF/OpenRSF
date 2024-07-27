@@ -21,7 +21,7 @@ include_directories(include)
 
 file(GLOB_RECURSE MAIN_SOURCES "src/math/ode/*.cpp")
 
-add_library(${PROJECT_NAME} SHARED GLOB_RECURSE)
+add_library(${PROJECT_NAME} SHARED ${MAIN_SOURCES})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
 

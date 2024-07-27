@@ -5,7 +5,7 @@ namespace rsf
   /******************************************************************************************************/
   /******************************************************************************************************/
   /******************************************************************************************************/
-  std::vector<double> OdeBase::computeJumpMap(double time, const std::vector<double> &state)
+  vector_t OdeBase::computeJumpMap(scalar_t time, const vector_t &state)
   {
     return state;
   }
@@ -13,8 +13,8 @@ namespace rsf
   /******************************************************************************************************/
   /******************************************************************************************************/
   /******************************************************************************************************/
-  std::vector<double> OdeBase::computeGuardSurfaces(double time, const std::vector<double> &state)
+  vector_t OdeBase::computeGuardSurfaces(scalar_t time, const vector_t &state)
   {
-    return std::vector<double>::Ones(1);
+    return vector_t::Ones(1);
   }
 } // namespace ocs2
